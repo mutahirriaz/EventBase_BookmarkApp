@@ -1,0 +1,18 @@
+type Event {
+    result: String!
+}
+
+type Bookmark {
+    id: String!
+    title: String!
+    bookmark: String!
+}
+
+type Query {
+    getBookmarks: [Bookmark]
+}
+
+type Mutation {
+    addBookmark(title: String!, bookmark: String!): Event
+    deleteBookmark(id: String): Event
+}
